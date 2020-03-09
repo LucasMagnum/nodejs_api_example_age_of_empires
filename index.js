@@ -1,14 +1,12 @@
 const express = require("express")
 const axios = require("axios")
 
+const config = require("./config")
 const app = express()
 
 
-const externalAPI = "https://age-of-empires-2-api.herokuapp.com/api/v1"
-
-
 app.get("/", (request, response) => {
-  const url = `${request.protocol}://${request.headers.host}`
+  const url = buildBaseURL(request)
 
   response.json({
     "project": "Age of Empires - Proxy API",
@@ -19,17 +17,18 @@ app.get("/", (request, response) => {
     "author": "Lucas Magnum",
     "repository": "https://github.com/lucasmagnum/age_of_empires_api_nodejs"
   })
+
 })
 
 
 app.get("/civilizations", (request, response) => {
-  axios.get(`${externalAPI}/civilizations`)
+  axios.get(`${config.externalAPI}/civilizations`)
     .then(res => {
       const civilizations = res.data.civilizations.map(civilization => {
         return {
           id: civilization.id,
           name: civilization.name,
-          url: `${request.protocol}://${request.headers.host}/civilizations/${civilization.id}`
+          url: buildBaseURL(request) + `/civilizations/${civilization.id}`
         }
       });
 
@@ -42,7 +41,7 @@ app.get("/civilizations", (request, response) => {
 })
 
 app.get("/civilizations/:id", (request, response) => {
-  axios.get(`${externalAPI}/civilization/${request.params.id}`)
+  axios.get(`${config.externalAPI}/civilization/${request.params.id}`)
     .then(res => {
       response.json({
         id: res.data.id,
@@ -58,7 +57,11 @@ app.get("/civilizations/:id", (request, response) => {
 })
 
 
-const PORT = 3001
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
+function buildBaseURL(request) {
+  return `${request.protocol}://${request.headers.host}`
+}
+
+
+app.listen(config.port, () => {
+    console.log(`Server running on port ${config.port}`)
 })
