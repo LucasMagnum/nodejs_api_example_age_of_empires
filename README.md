@@ -6,19 +6,19 @@ This is a example of application using NodeJS and proxying an existing API.
 In this case we are proxying the [Age of Empires](https://age-of-empires-2-api.herokuapp.com/docs/#/) API.
 
 
-Endpoints
-=========
+API
+====
 
-    # Return all civilizations
-    GET /civilizations
-    Response: {id, name}
+The documentation is available [here](./docs/api.md).
 
-    # Return civilization details
-    GET /civilizations/<id>
-    Response: {id, name, expansion, army_type, team_bonus}
+
+Quick Start
+===========
+
+Run `npm start` and you will be able to access `http://localhost:3000/` and start exploring the API.
 
 
 Testing
 =======
 
-Run `npm test` to get the tests working.
+    npm test
