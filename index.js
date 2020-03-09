@@ -15,7 +15,7 @@ app.get("/", (request, response) => {
         "civilizations": `${url}/civilizations`,
     },
     "author": "Lucas Magnum",
-    "repository": "https://github.com/lucasmagnum/age_of_empires_api_nodejs"
+    "repository": "https://github.com/lucasmagnum/nodejs_api_example_age_of_empires"
   })
 
 })
