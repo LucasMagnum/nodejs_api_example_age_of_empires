@@ -1,0 +1,32 @@
+{
+  "name": "age_of_empires_api",
+  "version": "1.0.0",
+  "description": "Age of Empires - Proxy API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "watch": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lucasmagnum/age_of_empires_api_nodejs.git"
+  },
+  "keywords": [
+    "api",
+    "proxy"
+  ],
+  "author": "Lucas Magnum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucasmagnum/age_of_empires_api_nodejs/issues"
+  },
+  "homepage": "https://github.com/lucasmagnum/age_of_empires_api_nodejs#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
