@@ -16,10 +16,15 @@ The documentation is available [here](./docs/api.md).
 Quick Start
 ===========
 
-Run `npm start` and you will be able to access `http://localhost:3000/` and start exploring the API.
+    * Clone this project
+    * Run `npm install`
+    * Run `npm start`
+    * Access `http://localhost:3000/`
 
 
 Testing
 =======
+
+This project uses `Dredd` as a testing tool, it reads the documentation in `docs/api.md` and run it against the project.
 
     npm test
