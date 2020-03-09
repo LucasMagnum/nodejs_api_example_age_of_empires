@@ -1,7 +1,7 @@
 {
   "name": "age_of_empires_api",
   "version": "1.0.0",
-  "description": "Age of Empires - Proxy API",
+  "description": "Sample application proxying Age of Empires API",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
