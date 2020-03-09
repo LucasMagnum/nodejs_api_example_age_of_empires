@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/lucasmagnum/age_of_empires_api_nodejs.git"
+    "url": "git+ssh://git@github.com/lucasmagnum/nodejs_api_example_age_of_empires.git"
   },
   "keywords": [
     "api",
@@ -19,9 +19,9 @@
   "author": "Lucas Magnum",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lucasmagnum/age_of_empires_api_nodejs/issues"
+    "url": "https://github.com/lucasmagnum/nodejs_api_example_age_of_empires/issues"
   },
-  "homepage": "https://github.com/lucasmagnum/age_of_empires_api_nodejs#readme",
+  "homepage": "https://github.com/lucasmagnum/nodejs_api_example_age_of_empires#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "express": "^4.17.1"
