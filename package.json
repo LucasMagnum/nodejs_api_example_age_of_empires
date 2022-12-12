@@ -24,7 +24,7 @@
   "homepage": "https://github.com/lucasmagnum/nodejs_api_example_age_of_empires#readme",
   "dependencies": {
     "axios": "^0.21.1",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "dredd": "^13.0.1",
